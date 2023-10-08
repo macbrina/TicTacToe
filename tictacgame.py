@@ -1,5 +1,6 @@
 import random
 from collections import defaultdict
+from menu import Menu
 
 from tictacboard import Board
 import pygame
@@ -8,9 +9,11 @@ import pygame
 class PlayervsPlayer:
     def __init__(self):
         self.board = Board()
-        self.player = "X"
+        self.menu = Menu()
+        self.player = None
         self.winner = None
         self.taking_move = True
+        self.choice = None
         self.x_score = 0
         self.o_score = 0
 
@@ -183,7 +186,7 @@ class PlayervsPlayer:
         self.board.reset_table()
         self.winner = None
         self.taking_move = True
-        self.player = "X"
+        self.player = self.choice
 
 
 class PlayervsBot(PlayervsPlayer):
@@ -192,8 +195,11 @@ class PlayervsBot(PlayervsPlayer):
         self.player_turn = True
         self.bot_delay = 3000
         self.bot_timer = pygame.time.set_timer(pygame.USEREVENT, self.bot_delay)
-        self.original_player = "X"
-        self.bot = "O"
+        self.original_player = None
+        self.bot = None
+        self.choice = None
+        self.bot_choice = None
+        self.player = None
 
     def player_move(self, pos):
         try:
@@ -296,9 +302,9 @@ class PlayervsBot(PlayervsPlayer):
         super().reset_player_player()
         self.player_turn = True
         self.bot_delay = 3000
-        self.bot_timer = pygame.time.set_timer(pygame.USEREVENT, self.bot_delay)
-        self.original_player = "X"
-        self.bot = "O"
+        self.original_player = self.choice
+        self.bot = self.bot_choice
+        self.player = self.choice
 
 
 class BotvsBot(PlayervsPlayer):
@@ -312,6 +318,7 @@ class BotvsBot(PlayervsPlayer):
         self.last_bot_move_time = pygame.time.get_ticks()
         self.bot_a = "X"
         self.bot_b = "O"
+        self.player = "X"
 
     def bot_a_move(self):
         current_time = pygame.time.get_ticks()
@@ -509,3 +516,4 @@ class BotvsBot(PlayervsPlayer):
         self.bot_b_start = False
         self.bot_a = "X"
         self.bot_b = "O"
+        self.player = "X"
