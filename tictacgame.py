@@ -48,6 +48,23 @@ class PlayervsPlayer:
         self.board.screen.blit(img,
                                (img_x, img_y, self.board.cell_size - 2 * margin, self.board.cell_size - 2 * margin))
 
+    def redraw(self, x, y, player):
+        if player == "X":
+            img = pygame.image.load("images/x.png")
+        elif player == "O":
+            img = pygame.image.load("images/o.png")
+
+        # Define a margin value to add space around the image
+        margin = 20
+        img = pygame.transform.scale(img, (self.board.cell_size - 2 * margin, self.board.cell_size - 2 * margin))
+
+        # Calculate the new position with margin
+        img_x = x * self.board.cell_size + margin
+        img_y = y * self.board.cell_size + margin
+
+        self.board.screen.blit(img,
+                               (img_x, img_y, self.board.cell_size - 2 * margin, self.board.cell_size - 2 * margin))
+
     def message(self):
         if self.winner is not None and self.winner == "X":
             self.board.screen.fill(self.board.game_over_bg_color_x, (100, 455, 248, 55))

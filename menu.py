@@ -15,10 +15,18 @@ class Menu:
         self.quit_button = pygame.image.load("images/playervsplayer.png")
         self.quit_button = pygame.transform.scale(self.quit_button, (300, 100))
 
+        self.quit_resume = pygame.image.load("images/playervsplayer.png")
+        self.quit_resume = pygame.transform.scale(self.quit_resume, (300, 100))
+        self.resume_button = pygame.image.load("images/botvsbot.png")
+        self.resume_button = pygame.transform.scale(self.resume_button, (300, 100))
+
         self.two_player_button = Button(225, 135, self.two_player_button, "Player vs Player")
         self.player_bot_button = Button(225, 220, self.player_bot_button, "Player vs Bot")
         self.bot_bot_button = Button(225, 305, self.bot_bot_button, "Bot vs Bot")
         self.quit_button = Button(225, 390, self.quit_button, "Quit")
+
+        self.resume_button = Button(225, 135, self.resume_button, "Resume")
+        self.quit_resume = Button(225, 220, self.quit_resume, "Quit")
 
         # Play again
         self.play_again_yes = pygame.image.load("images/botvsbot.png")
@@ -41,7 +49,6 @@ class Menu:
         self.o_button = Button(225, 200, self.o_button, "O")
         self.x_button = Button(225, 280, self.x_button, "X")
         self.back_button = Button(225, 360, self.back_button, "Go Back")
-
 
     def draw_text(self, text, font, text_col, x, y):
         menu_text = self.board.font.render(text, True, text_col)
