@@ -32,29 +32,29 @@ A simple command-line implementation of the classic Tic-Tac-Toe game in Python u
    
 4. Enjoy playing Tic-Tac-Toe!
 
-# Game Controls
+## Game Controls
 
 - Player 1 and Player 2 take turns clicking on empty cells to make their moves.
 - In player vs bot mode, you play against the computer.
 - Use the mouse to click on the cell where you want to place your symbol.
 - Press the Space bar to pause and upause the game.
 
-# Screenshots
+## Screenshots
 
 ![Game Screenshot](screenshots/Screenshot1.png)
 ![Game Screenshot](screenshots/Screenshot2.png)
 ![Game Screenshot](screenshots/Screenshot3.png)
 ![Game Screenshot](screenshots/Screenshot4.png)
 
-# Contributing
+## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or create a pull request.
 
-# License
+## License
 
 This project is licensed under the [MIT License](LICENSE). See the [LICENSE](LICENSE) file for details.
 
-# Acknowledgments
+## Acknowledgments
 
 Thanks to the Pygame community for creating an excellent library for game development in Python.
 
