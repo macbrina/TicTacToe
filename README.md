@@ -45,6 +45,7 @@ A simple command-line implementation of the classic Tic-Tac-Toe game in Python u
 ![Game Screenshot](screenshots/Screenshot2.png)
 ![Game Screenshot](screenshots/Screenshot3.png)
 ![Game Screenshot](screenshots/Screenshot4.png)
+![Game Screenshot](screenshots/Screenshot5.png)
 
 ## Contributing
 
