@@ -56,7 +56,7 @@ def main():
 
         if game_paused:
             board.screen.fill(board.menu_color)
-            menu.draw_text("MENU", board.font, "black", 190, 40)
+            menu.draw_text("PAUSED", board.font, "black", 180, 40)
             if drawing:
                 menu.resume_button.draw_button()
                 menu.quit_resume.draw_button()
